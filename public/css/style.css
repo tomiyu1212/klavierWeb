@@ -15,4 +15,14 @@ a {
 
 .top-wrapper {
     padding: 180px 0 100px 0;
+    animation: bgchange 20s ease infinite;
+}
+
+@keyframes bgchange{
+    0%   {background-image: url(/image/background1.jpg);}
+    25%  {background: url(/image/background2.jpg);}/*変化させたい色*/
+    50%  {background: url(/image/background3.jpg);}/*変化させたい色*/
+    75%  {background: url(/image/background4.jpg);}/*変化させたい色*/
+    90%  {background: url(/image/background5.jpg);}/*変化させたい色*/
+    100% {background: url(/image/background1.jpg);;}/*変化させたい色*/
 }
