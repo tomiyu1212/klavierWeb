@@ -21,7 +21,7 @@ a {
 }
 
 @keyframes bgchange{
-    0%   {background-image: url(/public/image/background1.jpg);}/*変化させたい色*/
+    0%   {background-image: url(/public/image/piano.png);}/*変化させたい色*/
     25%  {background:#fdcb9e;}/*変化させたい色*/
     50%  {background:#fdcbc1;}/*変化させたい色*/
     75%  {background:#ffff8c;}/*変化させたい色*/
