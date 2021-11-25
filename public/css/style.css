@@ -43,11 +43,12 @@ a {
 
 .brand {
     font-weight: bold;
-    font-size: 20px; }
+    font-size: 20px;
+}
 
 .site-header {
     position: relative;
-    background-color: rgba(22, 112, 165, 0.664); }
+    background-color: white; }
    
 .site-header__wrapper {
     padding-top: 1rem;
