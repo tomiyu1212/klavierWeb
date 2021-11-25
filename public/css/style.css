@@ -14,15 +14,129 @@ a {
 }
 
 .top-wrapper {
-    padding: 180px 0 100px 0;
+    padding: 150px 0 180px 0;
     animation: bgchange 20s ease infinite;
+    color: black;
+    text-align: center;
 }
 
 @keyframes bgchange{
-    0%   {background-image: url(/image/background1.jpg);}
-    25%  {background: url(/image/background2.jpg);}/*変化させたい色*/
-    50%  {background: url(/image/background3.jpg);}/*変化させたい色*/
-    75%  {background: url(/image/background4.jpg);}/*変化させたい色*/
-    90%  {background: url(/image/background5.jpg);}/*変化させたい色*/
-    100% {background: url(/image/background1.jpg);;}/*変化させたい色*/
+    0%   {background:tomato;}/*変化させたい色*/
+    25%  {background:#fdcb9e;}/*変化させたい色*/
+    50%  {background:#fdcbc1;}/*変化させたい色*/
+    75%  {background:#ffff8c;}/*変化させたい色*/
+    90%  {background:#b2dffb;}/*変化させたい色*/
+    100% {background:#ffe6e1;}/*変化させたい色*/
+}
+
+.top-wrapper h1 {
+    opacity: 0.7;
+    font-size: 45px;
+    letter-spacing: 5px;
+}
+
+.top-wrapper p {
+    opacity: 0.7;
+}
+
+/*header*/
+
+.brand {
+    font-weight: bold;
+    font-size: 20px; }
+
+.site-header {
+    position: relative;
+    background-color: rgba(22, 112, 165, 0.664); }
+   
+.site-header__wrapper {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+    @media (min-width: 600px) {
+.site-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0; } }
+@media (min-width: 600px) {
+.nav__wrapper {
+    display: flex; 
+    list-style: none
+} 
+}
+   
+@media (max-width: 599px) {
+    .nav__wrapper {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #d9f0f7;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out; }
+.nav__wrapper.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0); } }
+
+.nav__item a {
+    display: block;
+    padding: 1.5rem 1rem; }
+
+.nav__toggle {
+    display: none; }
+    @media (max-width: 599px) {
+.nav__toggle {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem; } 
+}
+
+/*news*/
+.table-head {
+    display: flex;
+    background-color: #b7cadc;
+    border-radius: 2px 2px 0 0;
+    height: 44px;
+    font-size: 16px;
+    line-height: 46px;
+    color: black;
+}
+
+.id-column {
+    width: 150px;
+    text-align: center;
+}
+
+.twitter-body {
+    background-color: whitesmoke;
+}
+  
+.twitter-body li {
+    height: 150px;
+    border: 2px solid rgb(175, 84, 84);
+    border-top: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.twitter-body .id-column {
+    font-size: 16px;
+    color: #bac6d3;
+}
+  
+.twitter-body .name-column {
+    font-size: 14px;
+    font-weight: 500;
+    color: #8491a5;
+}
+  
+.twitter-data {
+    display: flex;
 }
