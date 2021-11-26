@@ -15,28 +15,15 @@ a {
 
 .top-wrapper {
     padding: 150px 0 180px 0;
-    animation: bgchange 20s ease infinite;
+    background-image: url(/image/dog.jpg);
+    background-size: cover;
     color: black;
     text-align: center;
 }
 
-@keyframes bgchange{
-    0%   {background:white;}/*変化させたい色*/
-    25%  {background:#fdcb9e;}/*変化させたい色*/
-    50%  {background:#fdcbc1;}/*変化させたい色*/
-    75%  {background:#ffff8c;}/*変化させたい色*/
-    90%  {background:#b2dffb;}/*変化させたい色*/
-    100% {background:#ffe6e1;}/*変化させたい色*/
-}
-
 .top-wrapper h1 {
-    opacity: 0.7;
     font-size: 45px;
     letter-spacing: 5px;
-}
-
-.top-wrapper p {
-    opacity: 0.7;
 }
 
 /*header*/
