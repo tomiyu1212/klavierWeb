@@ -46,6 +46,12 @@ a {
     font-size: 20px;
 }
 
+.title-logo {
+    font-size: 50px;
+    margin: 0 0 20px 160px;
+    font-family: 'Cherry Swash', cursive;
+}
+
 .site-header {
     position: relative;
     background-color: white; }
