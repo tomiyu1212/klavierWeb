@@ -1,27 +1,28 @@
 const express = require("express");
-const app = express();
-const twitter = require("twitter");
-const fs = require("fs");
-const client = new twitter(JSON.parse(fs.readFileSync("secret.json","utf-8")));
+const exphbs = require ('express-handlebars');
+
+require ('dotenv').config();
+
+const app = new express ();
+
 app.use(express.static("public"));
 const PORT = process.env.PORT || 3000;
 
-const params = {screen_name: 'klavier_piano', count:4};
-var tweetsKlavier;
+// Parsing middleware
+app.use (express.urlencoded ({ extended: false }));
 
-console.log("@" + params.screen_name);
-client.get('statuses/user_timeline', params, (error, tweets, response) => {
-    if (!error) {
-        tweetsKlavier = tweets;
-    }
-    else {
-        console.error(error);
-    }
-});
+// Parse application/json
+app.use (express.json ());
 
-app.get("/", (req, res) => {
-    res.render('top.ejs', {tweet: tweetsKlavier});
-});
+// Template Engine
+app.engine ('hbs', exphbs.engine ( {
+    extname: '.hbs'
+}));
+app.set ('view engine', 'hbs');
+
+// router
+const routes = require ('./server/routes/user');
+app.use ('/', routes);
 
 app.listen(PORT, () => {
     console.log(`Example app listening at http://localhost:${PORT}`);

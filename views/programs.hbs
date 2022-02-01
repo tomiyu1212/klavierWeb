@@ -1,0 +1,24 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Top Page</a></li>
+        <li class="breadcrumb-item"><a href="/year">Select Year</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Programs</li>
+    </ol>
+</nav>
+
+<table class="table table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each rows}}
+        <tr>
+            <td>
+                <a href={{this.URL}}>{{this.Title}}</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,25 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Top Page</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Select Years</li>
+    </ol>
+</nav>
+
+<div class="row">
+    <div class="col-6"><h1>YEAR</h1></div>
+</div>
+
+<h5>見たい年を選択してください。</h5>
+
+<table class="table table-bordered">
+    <tbody>
+        {{#each rows}}
+        
+        <tr>
+            <td>
+                <a href="/viewPrograms/{{this.YEAR}}">{{this.YEAR}}</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

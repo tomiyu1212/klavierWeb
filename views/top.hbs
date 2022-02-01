@@ -1,0 +1,57 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Top Page</a></li>
+    </ol>
+</nav>
+
+<div class="row">
+    <div class="col-6">
+        <h1>Top Page</h1>
+    </div>
+</div>
+<br>
+
+{{#each rows}}
+<div>
+    <div class="row">
+        <div class="col-6">
+            <h5>「最新の情報」</h5>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <a href="{{this.URL}}">{{this.Title}}</a>
+        </div>
+    </div>
+</div>
+{{/each}}
+<br>
+<ul class="list-inline">
+    <li class="list-inline-item">
+        <div class="card" style="width: 18rem;">
+            <img src="image/piano_usagi.png" class="card-img-top" alt="piano">
+            <div class="card-body">
+                <h5 class="card-title">過去の演奏会情報</h5>
+                <p class="card-text">過去の音源やプログラムを掲載。</p>
+                <a href="/year" class="btn btn-primary">click me!!</a>
+            </div>
+        </div>
+    </li>
+    <li class="list-inline-item">
+        <div class="card" style="width: 18rem;">
+            <img src="image/syuwa_tsuujinai.png" class="card-img-top" alt="piano">
+            <div class="card-body">
+                <h5 class="card-title">仮</h5>
+                <p class="card-text">仮</p>
+                <a href="#" class="btn btn-primary">click me!!</a>
+            </div>
+        </div>
+    </li>
+    <li class="list-inline-item">
+        <div class="card" style="width: 18rem;">
+            <img src="image/syuwa_tsuujinai.png" class="card-img-top" alt="piano">
+            <div class="card-body">
+                <h5 class="card-title">仮</h5>
+                <p class="card-text">仮</p>
+                <a href="#" class="btn btn-primary">click me!!</a>
+            </div>
+        </div>
+    </li>
+</ul>

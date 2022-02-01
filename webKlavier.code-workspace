@@ -4,5 +4,17 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"cSpell.ignoreWords": [
+			"animal_chara_gorilla_girl",
+			"unstyled",
+			"usagi"
+		],
+		"cSpell.words": [
+			"gori",
+			"syuwa",
+			"tsuujinai",
+			"usagi"
+		]
+	}
 }
