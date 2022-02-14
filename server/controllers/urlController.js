@@ -2,10 +2,10 @@ const mysql = require ('mysql');
 
 // Connection Pool
 const pool = mysql.createPool ({
-    host: us-cdbr-east-05.cleardb.net,
-    user: b788ac0a6060c2,
-    password: c7bb0e66,
-    database: heroku_1d187119af2aade
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME
 });
 
 exports.view = (req, res) => {
