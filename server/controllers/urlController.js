@@ -42,7 +42,8 @@ exports.create = (req, res) => {
         console.log('Connected as ID' + connection.threadId);
 
         let title = req.body.title;
-        let url = req.body.url
+        let url = req.body.url;
+        let record =req.body.record;
 
         connection.query('ALTER TABLE klavierprograms AUTO_INCREMENT = 1', (err, rows) => {
             // When done with the connection, release it
@@ -55,7 +56,7 @@ exports.create = (req, res) => {
         var date = new Date();
         var year = date.getFullYear();
 
-        connection.query('INSERT INTO klavierprograms SET Title = ?, URL = ?, YEAR = ?', [title, url, year], (err, rows) => {
+        connection.query('INSERT INTO klavierprograms SET Title = ?, URL = ?, YEAR = ?, Record = ?', [title, url, year, record], (err, rows) => {
             // When done with the connection, release it
             if (!err) {
                 res.render ('addPrograms', {alert: '成功しました!!'});
