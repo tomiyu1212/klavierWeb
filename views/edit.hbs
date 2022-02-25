@@ -1,6 +1,21 @@
+<script>
+
+    function hoge() {
+        var elm = document.documentElement;
+        //scrollHeight ページの高さ clientHeight ブラウザの高さ
+        var bottom = elm.scrollHeight - elm.clientHeight;
+        //垂直方向へ移動
+        window.scroll(0, bottom);
+    }
+</script>
+
 <div class="row">
-    <div class="col-6"><h1>Programs</h1></div>
+    <div class="col-6">
+        <h1>Programs</h1>
+    </div>
     <div class="col-6 d-flex justify-content-end">
+        <button type="button" class="btn btn-outline-dark align-self-center" onclick="hoge();">下まで移動する</button>
+        <h1>&nbsp;&nbsp;</h1>
         <a href="/addPrograms" type="button" class="btn btn-primary align-self-center">+ プログラムを追加する</a>
     </div>
 </div>
@@ -21,8 +36,10 @@
             <td>{{this.Title}}</td>
             <td>{{this.Record}}</td>
             <td class="text-end">
-                <a href="/editPrograms/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-pencil"></i> 編集</a>
-                <a href="/delete/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-person-x"></i> 消去</a>
+                <a href="/editPrograms/{{this.id}}" type="button" class="btn btn-light btn-small"><i
+                        class="bi bi-pencil"></i> 編集</a>
+                <a href="/delete/{{this.id}}" type="button" class="btn btn-light btn-small"><i
+                        class="bi bi-person-x"></i> 消去</a>
             </td>
         </tr>
         {{/each}}
